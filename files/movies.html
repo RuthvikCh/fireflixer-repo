@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Raleway:wght@400;700&family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8acdc83b5a.js" crossorigin="anonymous"></script>  </head>
+
+  </head>
+
+
+  <body>
+    <nav>
+      <div class="menu-icon">
+<span class="fas fa-bars"></span></div>
+<div class="logo">FireFlixer.ml</div>
+<div class="nav-items">
+<li><a href="../index.html">Home</a></li>
+<li><a href="movies.html">Movies</a></li>
+<li><a href="series.html">Series</a></li>
+<li><a href="genres.html">Genres</a></li>
+<li><a href="about.html">About</a></li>
+</div>
+<div class="search-icon">
+<span class="fas fa-search"></span></div>
+<div class="cancel-icon">
+<span class="fas fa-times"></span></div>
+
+<form method="GET" id="formSearch">
+  <input type="text" placeholder="Search" id="search" class="search-data" required>
+  <button type="submit" name="submit" class="fas fa-search"></button>
+</form>
+    </nav>
+
+
+
+<h1 style="color: black; padding: 20px 9% 5px 9%;"> Top Movies Today </h1>
+<div class="container">
+<main id="main" style="display: flex;
+                      flex-wrap: wrap;
+                      justify-content: center;">
+
+  <div class="box">
+
+    <img src="" alt="">
+  <div class="in-box">
+      <span style="font-size: 25px;" >NAME</span> <br> 
+     <center><button class="btndl"> <a href="dload.html" target="_blank"> <i class="fa-solid fa-circle-play fa-spin"></i> Watch </a></button></center> 
+  </div>
+  
+  </div>
+</main>       
+</div>  
+<script src="fscript.js"></script>
+
+<footer>
+  <div class="bottom">
+    <center>
+      <span class="credit">Created By <a href=""></a> | </span>
+      <span class="far fa-copyright"></span><span> 2023 All rights reserved.</span>
+    </center>
+  </div>
+</footer>
+
+  </body>
+</html>
+
+<script>
+  const menuBtn = document.querySelector(".menu-icon span");
+  const searchBtn = document.querySelector(".search-icon");
+  const cancelBtn = document.querySelector(".cancel-icon");
+  const items = document.querySelector(".nav-items");
+  const form = document.querySelector("form");
+  menuBtn.onclick = ()=>{
+    items.classList.add("active");
+    menuBtn.classList.add("hide");
+    searchBtn.classList.add("hide");
+    cancelBtn.classList.add("show");
+  }
+  cancelBtn.onclick = ()=>{
+    items.classList.remove("active");
+    menuBtn.classList.remove("hide");
+    searchBtn.classList.remove("hide");
+    cancelBtn.classList.remove("show");
+    form.classList.remove("active");
+    cancelBtn.style.color = "#ff3d00";
+  }
+  searchBtn.onclick = ()=>{
+    form.classList.add("active");
+    searchBtn.classList.add("hide");
+    cancelBtn.classList.add("show");
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
